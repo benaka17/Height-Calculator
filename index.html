@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Calculator Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container input {
+            margin: 10px 0;
+        }
+        .container button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Height caculator tool</h1>
+        <label for="height">Input your height</label>
+        <input type="text" id="height" />
+        <button onclick="showHeight()">Xem</button>
+    </div>
+
+    <script>
+        function showHeight() {
+            var height = document.getElementById('height').value;
+            if (!isNaN(height) && height.trim() !== "") {
+                alert("Your height is " + height + "cm!");
+            } else {
+                alert("Please enter a valid height in cm.");
+            }
+        }
+    </script>
+</body>
+</html>
